@@ -8,3 +8,4 @@ reconhecimento.onresult = (evento) => {
 };
 
 botaoTranscricao.addEventListener('click', () => reconhecimento.start());
+
