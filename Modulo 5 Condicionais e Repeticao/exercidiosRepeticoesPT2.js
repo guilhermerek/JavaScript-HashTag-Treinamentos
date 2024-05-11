@@ -62,7 +62,7 @@ function listagemDeItensCardapio(lista) {
 }
 
 listagemDeItensCardapio(menuRestaurant);
-
+/*
 console.log('');
 console.log('ex 4');
 console.log('');
@@ -85,18 +85,25 @@ function calcularTotalConta(lista, listaPedidos) {
 
 const ex4 = calcularTotalConta(menuRestaurant, cartRestaurant);
 console.log(`O total gasto foi ${ex4}`);
-
+*/
 console.log('');
 console.log('ex 5');
 console.log('');
 
+const cardapioArray = [
+  'Hamburguer',
+  'batata frita',
+  'refrigerante',
+  'cachorro quente',
+];
+
 function listagemItensCardápio(lista) {
-  for (i of lista) {
+  for (const i of lista) {
     console.log(i);
   }
 }
 
-listagemDeItensCardapio(cardapio);
+listagemDeItensCardapio(cardapioArray);
 
 console.log('');
 console.log('ex 6');
@@ -105,25 +112,27 @@ console.log('');
 const cart = [
   {
     nome: 'soup',
-    preco: 12,
+    qtd: 2,
   },
   {
-    nome: 'rice with fries',
-    preco: 8,
+    nome: 'riceWithFries',
+    qtd: 2,
   },
   {
     nome: 'steak',
-    preco: 13,
+    qtd: 4,
   },
 ];
 
-function calcularTotalConta(lista) {
+function calcularTotalConta(cardapio, pedidoCliente) {
   let totalEx6 = 0;
-  for (i of lista) {
-    totalEx6 += lista[i].preco;
-  }
+  for (const pedido of pedidoCliente) {
+    if(pedido.nome in cardapio) {
+      totalEx6 += cardapio[pedido.nome] * pedido.qtd;
+    };
+  };
   return totalEx6;
 }
 
-const ex6 = calcularTotalConta(cart);
+const ex6 = calcularTotalConta(menuRestaurant, cart);
 console.log(ex6);
