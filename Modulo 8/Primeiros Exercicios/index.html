@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Eventos em elementos HTML</h2>
+    <p id="mudarCorTextoVermelho" onmouseover="mudarCorTexto()" onmouseout="voltarCor()">Passe o mouse aqui para mudar a cor do texto.</p>
+    <button id="exibirAlertaAoClicar" onclick="alert('Botão clicado!!!')">Clique aqui</button>
+    <input type="text" placeholder="Digite aqui" onfocus="this.value='Campo em Foco'" onblur="this.value='Digite aqui'" />
+    <img id="alterarImagem" src="imagem1.png" alt="Imagem misteriosa" onmouseover="alterarImagem()" onmouseout="alterarImagemPadrao()"/>
+  </body>
+  <script src="script.js"></script>
+</html>
