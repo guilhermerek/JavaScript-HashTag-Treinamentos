@@ -10,11 +10,23 @@ function voltarCor() {
   document.getElementById('mudarCorTextoVermelho').style.color = 'black';
 }
 
-function alterarImagem() {
-  document.getElementById('alterarImagem').src = 'imagem2.png';
+function botaoClicado() {
+  alert('Botão clicado!!!');
 }
 
-function alterarImagemPadrao() {
+function alterarImagem(imagem) {
+  document.getElementById('alterarImagem').src = imagem;
+}
+
+/*function alterarImagemPadrao() {
   document.getElementById('alterarImagem').src = 'imagem1.png';
+}*/
+
+//onfocus="this.value='Campo em Foco'" onblur="this.value='Digite aqui'"
+function campoEmFoco(elemento) {
+  elemento.value = 'Campo em foco!!';
 }
 
+function campoForaFoco(elemento) {
+  elemento.value = '';
+}
