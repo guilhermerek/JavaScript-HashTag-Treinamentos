@@ -1,0 +1,7 @@
+function dicionarTarefa(){
+
+}
+
+function escurecerBotao() {
+    
+}

@@ -1,0 +1,36 @@
+#BotaoAdicionar {
+    background-color: #007bff;
+    color: white;
+    
+    
+    font-size: 16px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border: 1px solid black;
+    border-radius: 12px;
+    height: 31px;
+}
+
+#BotaoAdicionar:hover {
+  background-color: #0056b3;
+}
+
+#DivPrincipal {
+    padding: 10px;
+    border-style: solid;
+    width: 500px;
+    text-align: center;
+}
+
+#CampoDeTexto {
+    padding: 2px 5px;
+    
+    width: 215px;
+    height: 20px;
+}
+
+h2 {
+    width: 100%;
+    display: inline-block;
+    
+}
