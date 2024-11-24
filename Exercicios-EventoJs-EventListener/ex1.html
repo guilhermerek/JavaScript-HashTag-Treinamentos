@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 1 : Alteração de Cor ao Passar o Mouse</title>
+    <style>
+      #changeColor {
+        background-color: orange;
+        height: 10rem;
+        width: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="changeColor"></div>
+
+    <script>
+      const ex1 = document.getElementById('changeColor');
+      function handleMouseOver() {
+        ex1.style.backgroundColor = 'blue';
+      }
+      function handleMouseOut() {
+        ex1.style.backgroundColor = 'orange';
+      }
+
+      ex1.addEventListener('mouseover', handleMouseOver);
+      ex1.addEventListener('mouseout', handleMouseOut);
+    </script>
+  </body>
+</html>

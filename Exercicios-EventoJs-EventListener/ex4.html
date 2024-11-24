@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Exercício 4: Prevenir Rolagem para Baixo e Remover Event Listener
+    </title>
+    <style>
+      body {
+        background-color: #ccc;
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Prevenir Rolagem para Baixo e Remover Event Listener</h1>
+    <script>
+      let contArrowDown = 0;
+
+      function preventScroll(event) {
+        if (event.key === 'ArrowDown') {
+          event.preventDefault();
+          console.log('Preventing default action!');
+          contArrowDown++;
+          console.log(contArrowDown);
+          if (contArrowDown > 10) {
+            document.removeEventListener('keydown', preventScroll);
+            console.log('Default action enable!');
+          }
+        }
+      }
+      document.addEventListener('keydown', preventScroll);
+    </script>
+  </body>
+</html>
+
+<!-- Passo 3: JavaScript para Prevenir a Rolagem
+- Crie uma função preventScroll(event) que será chamada sempre que a tecla for pressionada. 
+- Dentro dessa função, incremente a variável count para contar os pressionamentos da tecla.
+- Verifique se a tecla pressionada é "ArrowDown". Se for, use event.preventDefault() para desativar a rolagem para baixo.
+- Se o número de pressionamentos atingir ou exceder 10, remova o event listener com document.removeEventListener().
+
+Passo 4: Adição do Event Listener
+- Use document.addEventListener() para adicionar o event listener à tecla "ArrowDown", conectando-o à função preventScroll() criada anteriormente. -->
