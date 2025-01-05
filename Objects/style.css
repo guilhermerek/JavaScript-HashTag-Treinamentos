@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', 'sans-serif';
+}
+:root {
+  --stopwatch-primary-color: #36c9c6;
+  --stopwatch-primary-shade: #27918f;
+  --stopwatch-secondary-color: #ed6a5a;
+  --stopwatch-secondary-shade: #e73a23;
+  --stopwatch-light-color: #f4f1bb;
+  --stopwatch-backgroud-color: #9bc1bc;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  border: 2px solid var(--stopwatch-light-color);
+  padding: 0.5rem;
+  border-radius: 3px;
+  background-color: var(--stopwatch-secondary-color);
+  color: var(--stopwatch-primary-color);
+}
+
+button.secondary-button {
+  background-color: var(--stopwatch-primary-color);
+  color: var(--stopwatch-secondary-color);
+}
+
+button:hover {
+  background-color: var(--stopwatch-secondary-shade);
+}
+
+button.secondary-button:hover {
+  background-color: var(--stopwatch-primary-shade);
+}
+
+button:focus {
+  border: 3px solid #000000;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: var(--stopwatch-backgroud-color);
+  font-size: 3rem;
+  background-color: var(--stopwatch-secondary-color);
+}
+
+#stopwatch-wrapper {
+  background-color: var(--stopwatch-primary-color);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#stopwatch-display {
+  font-family: 'Major Mono Display', 'sans-serif';
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  border-radius: 10px;
+}
+
+.button-box {
+  margin: 1rem 0 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 10px;
+  }
+}
